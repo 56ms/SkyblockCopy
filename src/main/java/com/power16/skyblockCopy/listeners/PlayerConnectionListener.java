@@ -16,15 +16,12 @@ public class PlayerConnectionListener implements Listener {
         SkyblockCopy.getInstance().getProfileManager().loadProfile(player.getUniqueId());
 
         PlayerProfile profile = SkyblockCopy.getInstance().getProfileManager().getProfile(player.getUniqueId());
-        if (profile != null) {
-            player.setInvulnerable(profile.getBoolean("god-mode", false));
-        }
+
     }
 
 
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
-        // Save their file to Disk and clear them from RAM
         SkyblockCopy.getInstance().getProfileManager().unloadProfile(event.getPlayer().getUniqueId());
     }
 }

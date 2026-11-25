@@ -44,14 +44,12 @@ public class ProfileManager {
 
         PlayerProfile profile = new PlayerProfile(uuid);
 
-        // 1. Set defaults from config.yml for brand-new players
         double defaultCoins = SkyblockCopy.getInstance().getConfig().getDouble("starting-coins", 100.0);
         int defaultBits = SkyblockCopy.getInstance().getConfig().getInt("starting-bits", 0);
         profile.setValue("coins", defaultCoins);
         profile.setValue("bits", defaultBits);
         profile.setValue("god-mode", false);
 
-        // 2. Overwrite defaults with whatever was already saved in their <uuid>.yml
         if (config.getConfigurationSection("data") != null) {
             for (String key : config.getConfigurationSection("data").getKeys(false)) {
                 profile.setValue(key, config.get("data." + key));

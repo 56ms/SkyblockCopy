@@ -1,5 +1,6 @@
 package com.power16.skyblockCopy;
 
+import com.power16.skyblockCopy.commands.GamemodeCommand;
 import com.power16.skyblockCopy.commands.GodCommand;
 import com.power16.skyblockCopy.data.ProfileManager;
 import com.power16.skyblockCopy.listeners.PlayerConnectionListener;
@@ -26,6 +27,11 @@ public final class SkyblockCopy extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerConnectionListener(), this);
         getCommand("god").setExecutor(new GodCommand());
+
+        GamemodeCommand gamemodeCommand = new GamemodeCommand();
+        for (String cmd : new String[]{"gmc", "gms", "gma", "gmsp"}) {
+            getCommand(cmd).setExecutor(gamemodeCommand);
+        }
 
         getServer().getScheduler().runTaskTimer(this, () -> profileManager.saveAll(), 6000L, 6000L);
 
