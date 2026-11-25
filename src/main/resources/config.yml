@@ -1,6 +1,6 @@
 starting-coins: 0.0
 starting-bits: 0
 messages:
-  no-permission: "&cYou do not have permission to run this command!"
+  no-permission: "&cYou do not have permission to run this command! Contact server administrators if you believe this is a mistake."
   god-enabled: "&aGod mode enabled!"
   god-disabled: "&cGod mode disabled!"

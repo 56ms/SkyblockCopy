@@ -2,6 +2,27 @@ name: SkyblockCopy
 version: '1.0-SNAPSHOT'
 main: com.power16.skyblockCopy.SkyblockCopy
 api-version: '1.21'
+commands:
+  god:
+    description: Toggle invulnerability.
+    usage: /<command>
+    permission: PowerSkyblock.commands.god
+  gmc:
+    description: Switch to creative mode
+    usage: /<command> [player]
+    permission: PowerSkyblock.commands.gamemode.gmc
+  gms:
+    description: Switch to survival mode
+    usage: /<command> [player]
+    permission: PowerSkyblock.commands.gamemode.gms
+  gma:
+    description: Switch to adventure mode
+    usage: /<command> [player]
+    permission: PowerSkyblock.commands.gamemode.gma
+  gmsp:
+    description: Switch to spectator mode
+    usage: /<command> [player]
+    permission: PowerSkyblock.commands.gamemode.gmsp
 permissions:
   PowerSkyblock.*:
     default: op
@@ -14,7 +35,26 @@ permissions:
     description: Gives users full access to all commands.
     children:
       - PowerSkyblock.commands.god
+      - PowerSkyblock.commands.gamemode.*
 
   PowerSkyblock.commands.god:
     default: op
     description: Allows user to run /god command in game.
+
+  PowerSkyblock.commands.gamemode.*:
+    default: op
+    description: Allows user to have access to gamemode changing commands.
+    children:
+      - PowerSkyblock.commands.gamemode.gmc
+      - PowerSkyblock.commands.gamemode.gms
+      - PowerSkyblock.commands.gamemode.gma
+      - PowerSkyblock.commands.gamemode.gmsp
+
+  PowerSkyblock.commands.gamemode.gmc:
+    description: Gives user access to switch gamemode to Creative.
+  PowerSkyblock.commands.gamemode.gms:
+    description: Gives user access to switch gamemode to Survival.
+  PowerSkyblock.commands.gamemode.gma:
+    description: Gives user access to switch gamemode to Adventure.
+  PowerSkyblock.commands.gamemode.gmsp:
+    description: Gives user access to switch gamemode to Spectator.

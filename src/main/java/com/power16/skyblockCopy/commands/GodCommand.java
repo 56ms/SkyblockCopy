@@ -21,7 +21,7 @@ public class GodCommand implements CommandExecutor {
 
         SkyblockCopy plugin = SkyblockCopy.getInstance();
 
-        if (!player.hasPermission("skyblockcopy.god")) {
+        if (!player.hasPermission("PowerSkyblock.commands.god")) {
             player.sendMessage(plugin.getMessage("messages.no-permission"));
             return true;
         }
