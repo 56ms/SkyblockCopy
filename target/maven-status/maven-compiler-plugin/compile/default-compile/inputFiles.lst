@@ -1,8 +1,17 @@
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/SkyblockCopy.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/commands/FirstItemCommand.java
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/commands/GamemodeCommand.java
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/commands/GodCommand.java
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/data/PlayerProfile.java
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/data/ProfileManager.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/itemManager/Ability.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/itemManager/AbilityCost.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/itemManager/Enchants.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/itemManager/ItemRegistry.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/itemManager/Rarity.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/itemManager/SkyblockItem.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/itemManager/itemImpl/DefaultItem.java
+/home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/listeners/AbilityListener.java
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/listeners/PlayerConnectionListener.java
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/listeners/PlayerDamageListener.java
 /home/power16/Desktop/SkyblockCopy/src/main/java/com/power16/skyblockCopy/utils/SharedConfig.java

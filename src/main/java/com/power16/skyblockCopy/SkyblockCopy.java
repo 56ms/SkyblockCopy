@@ -1,9 +1,15 @@
 package com.power16.skyblockCopy;
 
+import com.power16.skyblockCopy.commands.FirstItemCommand;
 import com.power16.skyblockCopy.commands.GamemodeCommand;
 import com.power16.skyblockCopy.commands.GodCommand;
 import com.power16.skyblockCopy.data.ProfileManager;
+import com.power16.skyblockCopy.itemManager.ItemRegistry;
+import com.power16.skyblockCopy.itemManager.itemImpl.DefaultItem;
+import com.power16.skyblockCopy.listeners.AbilityListener;
 import com.power16.skyblockCopy.listeners.PlayerConnectionListener;
+import com.power16.skyblockCopy.utils.SharedConfig;
+import com.power16.skyblockCopy.utils.SharedMethods;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -12,10 +18,14 @@ public final class SkyblockCopy extends JavaPlugin {
 
     private static SkyblockCopy instance;
     private ProfileManager profileManager;
+    private SharedConfig sharedConfig;
+    private SharedMethods sharedMethods;
 
     @Override
     public void onEnable() {
         instance = this;
+        sharedConfig = new SharedConfig();
+        sharedMethods = new SharedMethods();
 
         saveDefaultConfig();
 
@@ -33,7 +43,15 @@ public final class SkyblockCopy extends JavaPlugin {
             getCommand(cmd).setExecutor(gamemodeCommand);
         }
 
+        registerItems();
+        getServer().getPluginManager().registerEvents(new AbilityListener(), this);
+
+
+        getCommand("firstItem").setExecutor(new FirstItemCommand());
+
         getServer().getScheduler().runTaskTimer(this, () -> profileManager.saveAll(), 6000L, 6000L);
+
+
 
         getLogger().info("SkyblockCopy Enabled!");
     }
@@ -57,5 +75,17 @@ public final class SkyblockCopy extends JavaPlugin {
 
     public ProfileManager getProfileManager() {
         return profileManager;
+    }
+
+    public SharedConfig getSharedConfig() {
+        return sharedConfig;
+    }
+
+    public SharedMethods getSharedMethods() {
+        return sharedMethods;
+    }
+
+    public void registerItems() {
+        ItemRegistry.register(new DefaultItem());
     }
 }
