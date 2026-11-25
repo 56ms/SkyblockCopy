@@ -23,9 +23,9 @@ public abstract class SkyblockItem {
     protected abstract Rarity rarity();
     protected abstract String displayItemType();  // e.g. "SWORD"
     protected Ability[] abilities() { return new Ability[]{}; }
-    protected Enchants[] enchants() { return new Enchants[]{}; }
+    protected SkyblockEnchant[] enchants() { return new SkyblockEnchant[]{}; }
 
-    public String getId() {
+    public String getItemID() {
         return itemID();
     }
 
@@ -45,7 +45,7 @@ public abstract class SkyblockItem {
         return lore();
     }
 
-    public Enchants[] getEnchants() {
+    public SkyblockEnchant[] getEnchants() {
         return enchants();
     }
 

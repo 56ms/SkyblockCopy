@@ -1,13 +1,11 @@
 package com.power16.skyblockCopy.itemManager.itemImpl;
 
 import com.power16.skyblockCopy.itemManager.Ability;
-import com.power16.skyblockCopy.itemManager.Enchants;
 import com.power16.skyblockCopy.itemManager.Rarity;
 import com.power16.skyblockCopy.itemManager.SkyblockItem;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.inventory.ItemStack;
 
 public class DefaultItem extends SkyblockItem {
 
