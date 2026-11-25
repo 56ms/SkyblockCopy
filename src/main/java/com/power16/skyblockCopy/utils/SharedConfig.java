@@ -14,4 +14,8 @@ public class SharedConfig {
     public String getPlugin_name() {
         return plugin_name;
     }
+
+    public Integer getMaxLoreLineSize() {
+        return 50;
+    }
 }

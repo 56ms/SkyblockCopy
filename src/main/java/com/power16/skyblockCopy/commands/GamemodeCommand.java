@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 public class GamemodeCommand implements CommandExecutor {
+
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
 
@@ -46,9 +47,10 @@ public class GamemodeCommand implements CommandExecutor {
             return true;
         }
         target.setGameMode(mode);
-        target.sendMessage(ChatColor.YELLOW + "Gamemode set to " + mode.name().substring(1).toLowerCase());
+        String lowerCaseGamemode = mode.name().substring(0).toUpperCase().substring(1).toLowerCase();
+        target.sendMessage(ChatColor.YELLOW + "Gamemode set to " + lowerCaseGamemode);
         if (target != sender) {
-            sender.sendMessage(ChatColor.GREEN + "Set " + target.getName() + "'s gamemode to " + mode.name().substring(1).toLowerCase() + ".");
+            sender.sendMessage(ChatColor.GREEN + "Set " + target.getName() + "'s gamemode to " + lowerCaseGamemode + ".");
         }
 
 

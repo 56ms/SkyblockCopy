@@ -3,6 +3,7 @@ version: '1.0-SNAPSHOT'
 main: com.power16.skyblockCopy.SkyblockCopy
 api-version: '1.21'
 commands:
+  firstItem:
   god:
     description: Toggle invulnerability.
     usage: /<command>
