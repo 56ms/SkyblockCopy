@@ -1,0 +1,20 @@
+name: SkyblockCopy
+version: '1.0-SNAPSHOT'
+main: com.power16.skyblockCopy.SkyblockCopy
+api-version: '1.21'
+permissions:
+  PowerSkyblock.*:
+    default: op
+    description: Gives users full access to all features.
+    children:
+      - PowerSkyblock.commands.*
+
+  PowerSkyblock.commands.*:
+    default: op
+    description: Gives users full access to all commands.
+    children:
+      - PowerSkyblock.commands.god
+
+  PowerSkyblock.commands.god:
+    default: op
+    description: Allows user to run /god command in game.

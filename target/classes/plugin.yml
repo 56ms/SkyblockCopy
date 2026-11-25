@@ -1,0 +1,12 @@
+name: SkyblockCopy
+version: '1.0-SNAPSHOT'
+main: com.power16.skyblockCopy.SkyblockCopy
+api-version: '1.21'
+commands:
+  giveitem:
+    description: Give yourself a custom item
+    permission: skyblockcopy.give
+    permission-message: You don't have permission.
+permissions:
+  skyblockcopy.give:
+    default: op
