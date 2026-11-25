@@ -45,9 +45,6 @@ public final class SkyblockCopy extends JavaPlugin {
         return ChatColor.translateAlternateColorCodes('&', raw);
     }
 
-    // lets see if this goes through
-
-
     public static SkyblockCopy getInstance() {
         return instance;
     }
